@@ -5,8 +5,8 @@ body {
   font-size: 20px;
   color: ivory;
 }
-#cointainer {
-  display: flex; /* Allow the centering to work */
+#container {
+  display: flex;
   flex-direction: row;
 }
 .number {
@@ -14,14 +14,6 @@ body {
   padding: 2px;
   width: 15px;
   background-color: red;
-}
-ul#ul2 {
-  min-width: 696px;
-  padding-top: 20px;
-}
-ul#ul2 li {
-  font-size: 50px;
-  display: inline;
 }
 .active {
   transition-delay: 5s;
@@ -37,8 +29,6 @@ button {
   letter-spacing: 1px;
   font-style: inherit;
   transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
   outline: none;
   font-size: 17px;
 }

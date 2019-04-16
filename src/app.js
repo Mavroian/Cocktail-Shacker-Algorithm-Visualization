@@ -18,7 +18,7 @@ function createCheesyTitle(slogan) {
   return container;
 }
 
-const title = createCheesyTitle(sort.returnValue("Coctail Shacker Algorith"));
+const title = createCheesyTitle(sort.returnValue("Coctail Shacker Algorithm"));
 document.getElementById("title").appendChild(title);
 
 /*

@@ -12,7 +12,6 @@ class CocktailShaker {
           parseInt(arr[i].style.height) >= parseInt(arr[i + 1].style.height)
         ) {
           const temp = `${arr[i + 1].style.height}`;
-          //arr[i + 1].classList.add("active");
           arr[i + 1].style.setProperty("height", `${arr[i].style.height}`);
           arr[i].style.setProperty("height", `${temp}`);
         }
@@ -23,7 +22,6 @@ class CocktailShaker {
           parseInt(arr[i].style.height) <= parseInt(arr[i - 1].style.height)
         ) {
           const temp = `${arr[i - 1].style.height}`;
-          //arr[i - 1].classList.add("active");
           arr[i - 1].style.setProperty("height", `${arr[i].style.height}`);
           arr[i].style.setProperty("height", `${temp}`);
         }
