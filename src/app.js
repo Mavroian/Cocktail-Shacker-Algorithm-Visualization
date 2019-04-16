@@ -10,7 +10,6 @@ const Sort = require("./Sort");
 require("./index.css");
 
 const sort = new Sort();
-sort.sort();
 
 function createCheesyTitle(slogan) {
   const container = document.createElement("h1");
@@ -19,7 +18,7 @@ function createCheesyTitle(slogan) {
   return container;
 }
 
-const title = createCheesyTitle(sort.returnValue("Re-Engineer Yourself"));
+const title = createCheesyTitle(sort.returnValue("Coctail Shacker Algorith"));
 document.getElementById("title").appendChild(title);
 
 /*
@@ -29,12 +28,29 @@ document.getElementById("title").appendChild(title);
     In our `index.html` page, we have a short form.
     Here is the code that talks to it.
   */
-function changeTitle(event) {
-  event.preventDefault();
-  // console.log('What is an event?', event);
-}
+// function changeTitle(event) {
+//   event.preventDefault();
+//   console.log("What is an event?", event);
+// }
+const container = document.getElementById("container");
+const numBtn = document.getElementById("genNum");
+const sortBtn = document.getElementById("sortNum");
 
-const form = document.querySelector("form");
-document.addEventListener("DOMContentLoaded", () => {
-  form.onsubmit = changeTitle;
+const generateBars = () => {
+  for (let i = 0; i < 100; i++) {
+    const bar = document.createElement("div");
+    bar.classList.add("number");
+    bar.style.setProperty("height", `${Math.floor(Math.random() * 400)}px`);
+    container.append(bar);
+  }
+};
+numBtn.addEventListener("click", () => {
+  generateBars();
+});
+sortBtn.addEventListener("click", () => {
+  let arr = Array.from(container.children);
+  let sortNum = new Sort(arr);
+  setTimeout(() => {
+    sortNum.sort(arr);
+  }, 2000);
 });
